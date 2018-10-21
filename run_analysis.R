@@ -116,4 +116,4 @@ names(mergedData) <- gsub("BodyBody", "Body", names(mergedData))          # Body
 tidyData <- aggregate(. ~subject + activity, mergedData, mean)
 tidyData <- tidyData[order(tidyData$subject, tidyData$activity),]
 write.table(tidyData, file = "tidydata.txt", row.name = FALSE)
-
+dim(tidyData)
